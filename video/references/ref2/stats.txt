@@ -1,0 +1,14 @@
+name: ref2
+source: AQNDjpZpQFKvgXFqoKnaRRnqrI4YCQZvheW__fu-ynESvvtIFmcIeV3Hb5DeLy-wcHIWGbjjowua7zTd3oxBjamcW6lbRjLieCj8ZpIjIpXlgA.mp4
+codec_name=h264
+width=720
+height=1280
+r_frame_rate=30/1
+nb_frames=1875
+codec_name=aac
+r_frame_rate=0/0
+nb_frames=1468
+duration=62.612042
+size=5857000
+bit_rate=748354
+avg_colour: rgb(67,59,55)
