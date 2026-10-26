@@ -1,0 +1,39 @@
+{
+  "name": "morphlens-reel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Remotion vertical reel explaining the MorphLens Lab modes (brightness, contrast, sharpen) on real pixels.",
+  "scripts": {
+    "assets": "tsx scripts/build-assets.ts && tsx scripts/build-sfx.ts",
+    "studio": "remotion studio",
+    "render": "remotion render MorphLensReel output/morphlens_lab_reel.mp4 --gl=egl --hardware-acceleration=if-possible --enable-multiprocess-on-linux --concurrency=50%",
+    "render:preview": "remotion render MorphLensReel output/preview.mp4 --scale=0.35 --gl=egl --enable-multiprocess-on-linux --hardware-acceleration=if-possible",
+    "still": "remotion still MorphLensThumbnail output/morphlens_lab_reel_thumbnail.png --gl=egl",
+    "typecheck": "tsc --noEmit",
+    "sfx": "tsx scripts/build-sfx.ts",
+    "assets:denoise": "tsx scripts/build-assets-denoise.ts",
+    "render:denoise": "remotion render MorphLensDenoiseReel output/morphlens_denoise_reel.mp4 --gl=egl --hardware-acceleration=if-possible --enable-multiprocess-on-linux --concurrency=50%",
+    "render:denoise:preview": "remotion render MorphLensDenoiseReel output/preview_denoise.mp4 --scale=0.35 --gl=egl --enable-multiprocess-on-linux --hardware-acceleration=if-possible",
+    "still:denoise": "remotion still MorphLensDenoiseThumbnail output/morphlens_denoise_thumbnail.png --gl=egl",
+    "assets:showreel": "tsx scripts/build-assets-showreel.ts",
+    "render:showreel": "remotion render MorphLensShowreel output/morphlens_showreel.mp4 --gl=egl --hardware-acceleration=if-possible --enable-multiprocess-on-linux --concurrency=50%",
+    "render:showreel:preview": "remotion render MorphLensShowreel output/preview_showreel.mp4 --scale=0.35 --gl=egl --enable-multiprocess-on-linux --hardware-acceleration=if-possible",
+    "still:showreel": "remotion still MorphLensShowreelThumbnail output/morphlens_showreel_thumbnail.png --gl=egl"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.537",
+    "@remotion/compositor-linux-x64-gnu": "^4.0.537",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/pngjs": "6.0.5",
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "pngjs": "7.0.0",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  }
+}

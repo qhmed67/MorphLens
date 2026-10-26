@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "MorphLens",
+    "slug": "morphlens",
+    "scheme": "morphlens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "MorphLens needs access to your photos so you can edit them.",
+        "NSCameraUsageDescription": "MorphLens needs camera access so you can take a photo to edit."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#07070B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MorphLens needs access to your photos so you can edit them."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "MorphLens saves your edits to your photo library.",
+          "savePhotosPermission": "MorphLens saves your edits to your photo library."
+        }
+      ],
+      "expo-sharing",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#141412"
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
